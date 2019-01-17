@@ -116,6 +116,7 @@ export enum TaxRateType {
   SOCIAL_HOUSING = "SOCIAL_HOUSING",
   STANDARD = "STANDARD",
   WATER = "WATER",
+  WINE = "WINE",
 }
 
 export enum WeightUnitsEnum {
@@ -182,6 +183,7 @@ export interface CollectionCreateInput {
   backgroundImage?: any | null;
   backgroundImageAlt?: string | null;
   seo?: SeoInput | null;
+  publishedDate?: any | null;
   products?: (string | null)[] | null;
 }
 
@@ -193,6 +195,7 @@ export interface CollectionInput {
   backgroundImage?: any | null;
   backgroundImageAlt?: string | null;
   seo?: SeoInput | null;
+  publishedDate?: any | null;
 }
 
 export interface CustomerInput {
@@ -288,6 +291,7 @@ export interface ShopSettingsInput {
   description?: string | null;
   includeTaxesInPrices?: boolean | null;
   displayGrossPrices?: boolean | null;
+  chargeTaxesOnShipping?: boolean | null;
   trackInventoryByDefault?: boolean | null;
   defaultWeightUnit?: WeightUnitsEnum | null;
 }
